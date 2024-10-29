@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinacoteca di Mia Khalifa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('pinacoteca.jpg');
+            background-size: cover;
+            
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            color: rgb(164, 214, 26);
+        }
+        h1 {
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .navbar button {
+            margin: 0 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .modal p {
+            color: rgb(255, 255, 255);
+            margin-top: 10px;
+            text-align: center;
+        }
+        /* Media Queries per migliorare la responsività */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar button {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pinacoteca di Mia Khalifa</h1>
+    <div class="navbar">
+        <button onclick="filterGallery('all')">Tutti</button>
+        <button onclick="filterGallery('popolari')">Popolari</button>
+        <button onclick="filterGallery('recenti')">Recenti</button>
+    </div>
+    <div class="gallery" id="gallery">
+        <div class="item popolari">
+            <img src="Mia/51RhAlZ2DRL._AC_UF894,1000_QL80_.jpg" alt="Mia Khalifa 1" onclick="openModal(this.src, 'StickerMia - Design sticker fanbase creation 10000 limited edition\'immagine 1')">
+            <p>StickerMia</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Mia Khalifa 2" onclick="openModal(this.src, 'Mia ha fame - Ogni giorno a pranzo, Mia mangi il migliore cibo del mondo, HAMBURGER\'immagine 2')">
+            <p>Mia ha fame</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/download (1).jpg" alt="Mia Khalifa 3" onclick="openModal(this.src, 'Mia guida - Anche se guida ogni porte di papa, i nostri reporter hanno beccato mia GUIDANDO. Di solito fa pompini\'immagine 3')">
+            <p>Mia guida</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/download (2).jpg" alt="Mia Khalifa 4" onclick="openModal(this.src, 'Mia respira- Mia respira poche volte nella sua vita per colpa dei cazzi che la lasciano senza aria\'immagine 4')">
+            <p>Mia respira</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/download (3).jpg" alt="Mia Khalifa 5" onclick="openModal(this.src, 'Mia fancy - Mia pronta per andare nei negozi della grande New York\'immagine 5')">
+            <p>Mia fancy</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/download (4).jpg" alt="Mia Khalifa 6" onclick="openModal(this.src, 'Mia arrabiata - Mia guardandoti giocare a fifa e non vuoi un pompino\'immagine 6')">
+            <p>Mia arrabiata</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/download.jpg" alt="Mia Khalifa 7" onclick="openModal(this.src, 'Mia ti vuole - Mia vuole strapparsi i vestiti e prenderlo nel culo\'immagine 7')">
+            <p>Mia ti vuole</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (1).jpg" alt="Mia Khalifa 8" onclick="openModal(this.src, 'Mia Khalifa 8 - Descrizione dell\'immagine 8')">
+            <p>Mia Khalifa 8</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (2).jpg" alt="Mia Khalifa 9" onclick="openModal(this.src, 'Mia Khalifa 9 - Descrizione dell\'immagine 9')">
+            <p>Mia Khalifa 9</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (3).jpg" alt="Mia Khalifa 10" onclick="openModal(this.src, 'Mia Khalifa 10 - Descrizione dell\'immagine 10')">
+            <p>Mia Khalifa 10</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (4).jpg" alt="Mia Khalifa 11" onclick="openModal(this.src, 'Mia Khalifa 11 - Descrizione dell\'immagine 11')">
+            <p>Mia Khalifa 11</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (5).jpg" alt="Mia Khalifa 12" onclick="openModal(this.src, 'Mia Khalifa 12 - Descrizione dell\'immagine 12')">
+            <p>Mia Khalifa 12</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (6).jpg" alt="Mia Khalifa 13" onclick="openModal(this.src, 'Mia Khalifa 13 - Descrizione dell\'immagine 13')">
+            <p>Mia Khalifa 13</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (7).jpg" alt="Mia Khalifa 14" onclick="openModal(this.src, 'Mia Khalifa 14 - Descrizione dell\'immagine 14')">
+            <p>Mia Khalifa 14</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (8).jpg" alt="Mia Khalifa 15" onclick="openModal(this.src, 'Mia Khalifa 15 - Descrizione dell\'immagine 15')">
+            <p>Mia Khalifa 15</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (12).jpg" alt="Mia Khalifa 16" onclick="openModal(this.src, 'Mia Khalifa 16 - Descrizione dell\'immagine 16')">
+            <p>Mia Khalifa 16</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (13).jpg" alt="Mia Khalifa 17" onclick="openModal(this.src, 'Mia Khalifa 17 - Descrizione dell\'immagine 17')">
+            <p>Mia Khalifa 17</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (14).jpg" alt="Mia Khalifa 18" onclick="openModal(this.src, 'Mia Khalifa 18 - Descrizione dell\'immagine 18')">
+            <p>Mia Khalifa 18</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images.jpg" alt="Mia Khalifa 19" onclick="openModal(this.src, 'Mia Khalifa 19 - Descrizione dell\'immagine 19')">
+            <p>Mia Khalifa 19</p>
+        </div>
+        <div class="item popolari">
+            <img src="Mia/images (10).jpg" alt="Mia Khalifa 20" onclick="openModal(this.src, 'Mia Khalifa 20 - Descrizione dell\'immagine 20')">
+            <p>Mia Khalifa 20</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Ingandito">
+        <p id="modalDescription"></p>
+    </div>
+
+    <script>
+        function openModal(src, description) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+            modalImage.src = src;
+            modalDescription.textContent = description;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery .item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
